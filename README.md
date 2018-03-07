@@ -12,18 +12,18 @@ Extensions to this could include:
 Example usage
 
 ```java
-      String plain = "my string";
-      
-			//Test PassphraseObfuscatorURL with local entropy file and algorithm overrides
-			map = new java.util.HashMap<String, String>();
-			map.put(ObfuscatorInf.PWB_ALGORITM_HASH, "SHA-512");
-			map.put(ObfuscatorInf.PWB_ALGORITM_PBE,"PBEWithSHA1AndDESede");
-			map.put(ObfuscatorInf.PWB_URL, System.getProperty("user.home")+"/hoggmania.entropy");
-			map.put(ObfuscatorInf.PWB_IMPLEMENTATION, PassphraseObfuscatorURL.class.getName());
-      
-      //To obfuscate the plain
-      String encryptedPropValue = ObfuscateSecretsHelper.obfuscatedSecretAndWrite(plain, map);
+String plain = "my string";
 
-      //To de-obfuscate 
-      String plain-back = ObfuscateSecretsHelper.parseObfuscatedSecretAndDecrypt(encryptedPropValue));
+//Test PassphraseObfuscatorURL with local entropy file and algorithm overrides
+map = new java.util.HashMap<String, String>();
+map.put(ObfuscatorInf.PWB_ALGORITM_HASH, "SHA-512");
+map.put(ObfuscatorInf.PWB_ALGORITM_PBE,"PBEWithSHA1AndDESede");
+map.put(ObfuscatorInf.PWB_URL, System.getProperty("user.home")+"/hoggmania.entropy");
+map.put(ObfuscatorInf.PWB_IMPLEMENTATION, PassphraseObfuscatorURL.class.getName());
+
+//To obfuscate the plain
+String encryptedPropValue = ObfuscateSecretsHelper.obfuscatedSecretAndWrite(plain, map);
+
+//To de-obfuscate 
+String plain-back = ObfuscateSecretsHelper.parseObfuscatedSecretAndDecrypt(encryptedPropValue));
 ```
