@@ -15,7 +15,7 @@ Example usage
 String plain = "my string";
 
 //Test PassphraseObfuscatorURL with local entropy file and algorithm overrides
-map = new java.util.HashMap<String, String>();
+Map<String, String> map = new java.util.HashMap<String, String>();
 map.put(ObfuscatorInf.PWB_ALGORITM_HASH, "SHA-512");
 map.put(ObfuscatorInf.PWB_ALGORITM_PBE,"PBEWithSHA1AndDESede");
 map.put(ObfuscatorInf.PWB_URL, System.getProperty("user.home")+"/hoggmania.entropy");
