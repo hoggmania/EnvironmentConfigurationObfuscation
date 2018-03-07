@@ -56,7 +56,7 @@ public class PassphraseObfuscatorURL extends PassphraseObfuscatorImp implements 
 	private String	 url;
 	private boolean  doNotgenerateEntropyFile;
 
-	protected static String defaultEntropyFile = System.getProperty("user.home")+"/callsign.entropy";
+	protected static String defaultEntropyFile = System.getProperty("user.home")+"/hoggmania.entropy";
 	
 	
 	
