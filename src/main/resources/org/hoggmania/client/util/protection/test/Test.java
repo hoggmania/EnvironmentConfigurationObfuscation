@@ -38,7 +38,7 @@ public class Test {
 			// Setup some options
 			Map<String, String> map = null;
 			boolean logging = true;
-			String plain = "James jumped over the quick brown fox";
+			String plain = "The cox jumped over the quick brown fox";
 			String encryptedPropValue;
 
 			//Test ObfuscatePlain passthrough
@@ -56,7 +56,7 @@ public class Test {
 			map = new java.util.HashMap<String, String>();
 			map.put(ObfuscatorInf.PWB_ALGORITM_HASH, "SHA-512");
 			map.put(ObfuscatorInf.PWB_ALGORITM_PBE,"PBEWithSHA1AndDESede");
-			map.put(ObfuscatorInf.PWB_URL, System.getProperty("user.home")+"/callsign.entropy");
+			map.put(ObfuscatorInf.PWB_URL, System.getProperty("user.home")+"/hoggmania.entropy");
 			map.put(ObfuscatorInf.PWB_IMPLEMENTATION, PassphraseObfuscatorURL.class.getName());
 
 			encryptedPropValue = ObfuscateSecretsHelper.obfuscatedSecretAndWrite(plain, map);
