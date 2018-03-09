@@ -38,11 +38,35 @@ String plain-back = ObfuscateSecretsHelper.parseObfuscatedSecretAndDecrypt(encry
 ```
 
 # Command Line Options
-The are a few CLI tools that can be used : -
+The are a few CLI tools that can be used, this utility is to obfuscate a secret, 
+
+These are the common the system options overrides (-D) available to all scripts: -
+--PWB_ALGORITM_PBE
+--PWB_ALGORITM_HASH
+--PWB_PROVIDER
+Warning, these options must be used when decrypting the value as well.
+
+
+The additional parameter is available for obfuscation only (as it's encode in the string) : -
+--PWB_IMPLEMENTATION
+
+
+## (De)Obfuscate values on the CLI & Java
+
+```bash
+java -DPWB_PROVIDER=BC com.acti.crypto.generator.utils.ObfuscateSecret password01
+Parameters:
+args password to encrypt
+```
+## (De)Obfuscate values in an XML file
 ```bash
 ObfuscateSecretInXML <xml-file> <true/false true=obfuscate false=de-ofuscate> <xpath expression> <attribute name>
 ```
 
+## (De)Obfuscate values in an properties file
+```bash
+ObfuscateSecretsInProperties <property file> <true/false true=obfuscate false=de-ofuscate> <true/false true=comma-separated-values false=single value> <comma delimited keys to obfuscate (no spaces)>
+```
 
 # How soon will my ticket be fixed?
 The best way to have a bug fixed or feature request implemented is to to fork the repository and send a pull request. If the pull request is reasonable it has a good chance of making it into the next release. If you build the release yourself, even more chance!
