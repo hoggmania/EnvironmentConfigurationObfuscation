@@ -1,5 +1,7 @@
 # EnvironmentConfigurationObfuscation
-A pluggable mechanism to (de)obfuscate configuration secrets in a lights out management environment.
+A pluggable mechanism to (de)obfuscate configuration secrets in a lights out management environment. 
+
+** WARNING ** This is not encrypt, it is obfuscation only. An attacker with full access to the hoist machine could de-obfuscate the secret. If you need full FIPS-like secret protection , buy a HSM! Can't say you haven't been warned.
 
 Can use static machine entropy (mac addresses etc) or a remote file in a shared/clustered model. Does not require the use of a HSM or keystore, instead it recreates the entropy to decrypt the secret.
 
@@ -9,7 +11,7 @@ Extensions to this could include:
 3. External HSM 
 
 
-Example usage
+Example usage to obfuscate
 
 ```java
 String plain = "my string";
@@ -23,7 +25,10 @@ map.put(ObfuscatorInf.PWB_IMPLEMENTATION, PassphraseObfuscatorURL.class.getName(
 
 //To obfuscate the plain
 String encryptedPropValue = ObfuscateSecretsHelper.obfuscatedSecretAndWrite(plain, map);
+```
 
+Example usage to obfuscate
+```java
 //To de-obfuscate 
 String plain-back = ObfuscateSecretsHelper.parseObfuscatedSecretAndDecrypt(encryptedPropValue));
 ```
