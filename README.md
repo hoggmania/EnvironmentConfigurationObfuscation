@@ -52,11 +52,8 @@ The additional parameter is available for obfuscation only (as it's encode in th
 
 
 ## (De)Obfuscate values on the CLI & Java
-
 ```bash
-java -DPWB_PROVIDER=BC com.acti.crypto.generator.utils.ObfuscateSecret password01
-Parameters:
-args password to encrypt
+ObfuscateSecret <value> <true/false true=obfuscate false=de-ofuscate>
 ```
 ## (De)Obfuscate values in an XML file
 ```bash
