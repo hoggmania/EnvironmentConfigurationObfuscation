@@ -27,3 +27,10 @@ String encryptedPropValue = ObfuscateSecretsHelper.obfuscatedSecretAndWrite(plai
 //To de-obfuscate 
 String plain-back = ObfuscateSecretsHelper.parseObfuscatedSecretAndDecrypt(encryptedPropValue));
 ```
+
+# How soon will my ticket be fixed?
+The best way to have a bug fixed or feature request implemented is to to fork the repository and send a pull request. If the pull request is reasonable it has a good chance of making it into the next release. If you build the release yourself, even more chance!
+
+If you don't fix the bug yourself, the bug might never get fixed. If it is a serious bug, other people than you might care enough to provide a fix.
+
+In other words, there is no guarantee that a bug or feature request gets fixed. Tickets that are more than 6 months old are likely to be closed to keep the backlog manageable.
