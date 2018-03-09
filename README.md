@@ -37,6 +37,13 @@ Example usage to obfuscate
 String plain-back = ObfuscateSecretsHelper.parseObfuscatedSecretAndDecrypt(encryptedPropValue));
 ```
 
+# Command Line Options
+The are a few CLI tools that can be used : -
+```bash
+ObfuscateSecretInXML <xml-file> <true/false true=obfuscate false=de-ofuscate> <xpath expression> <attribute name>
+```
+
+
 # How soon will my ticket be fixed?
 The best way to have a bug fixed or feature request implemented is to to fork the repository and send a pull request. If the pull request is reasonable it has a good chance of making it into the next release. If you build the release yourself, even more chance!
 
