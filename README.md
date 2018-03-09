@@ -41,9 +41,9 @@ String plain-back = ObfuscateSecretsHelper.parseObfuscatedSecretAndDecrypt(encry
 The are a few CLI tools that can be used, this utility is to obfuscate a secret, 
 
 These are the common the system options overrides (-D) available to all scripts: -
---PWB_ALGORITM_PBE
---PWB_ALGORITM_HASH
---PWB_PROVIDER
+1. PWB_ALGORITM_PBE
+2. PWB_ALGORITM_HASH
+2. PWB_PROVIDER
 Warning, these options must be used when decrypting the value as well.
 
 
