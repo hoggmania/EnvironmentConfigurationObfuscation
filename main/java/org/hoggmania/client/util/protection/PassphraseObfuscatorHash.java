@@ -44,8 +44,9 @@ import org.hoggmania.client.util.protection.utils.FindNetworkEntropy;
  */
 public class PassphraseObfuscatorHash extends PassphraseObfuscatorImp implements ObfuscatorInf {
 
-	protected final String findEntropy() {
-		String entropy = null;
+	String entropy = null;
+	
+	protected final String findEntropy() {	
 		if (entropy == null) {
 			entropy = FindNetworkEntropy.getNetworkEntropy().replaceAll("-", "").replaceAll(":", "");
 			if (entropy == null || entropy.trim().length() == 0)
